@@ -6,7 +6,7 @@ public class CloudClient {
     public static void main(String[] args) {
     	
         // Let's say we choose AWS at runtime
-        CloudResourceFactory factory = new AWSResourceFactory();
+        CloudResourceFactory factory = new AzureResourceFactory();
 
         
         /* Create a family of related objects (like AWSCompute and AWSStorage) without specifying their exact concrete 

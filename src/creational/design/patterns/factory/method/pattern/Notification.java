@@ -1,6 +1,8 @@
 package creational.design.patterns.factory.method.pattern;
 
 
-public interface Notification {
+public abstract interface Notification {
+	
 	 void notifyUser();
+	
 }

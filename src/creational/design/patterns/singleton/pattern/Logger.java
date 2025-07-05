@@ -20,11 +20,12 @@ Singleton ensures one global instance.
  */
 
 class Logger {
+	
     private static Logger instance;
 
      // private constructor
     // new Logger(); // ❌ This is illegal outside the class
-    private Logger() {} 
+  private Logger() {} 
 
     
     public static Logger getInstance() {

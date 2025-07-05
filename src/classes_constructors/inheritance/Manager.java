@@ -1,6 +1,7 @@
 package classes_constructors.inheritance;
 
 public class Manager extends Employee {
+	
 	// Specific behaviors or fields for different roles
     private int teamSize;
 

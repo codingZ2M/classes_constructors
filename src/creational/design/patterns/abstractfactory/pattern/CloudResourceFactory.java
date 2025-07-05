@@ -2,6 +2,7 @@ package creational.design.patterns.abstractfactory.pattern;
 
 // Abstract factory interface for creating a family of related objects (Compute + Storage), depending on the cloud provider.
 public interface CloudResourceFactory {
+	
 	   Compute createCompute();
 	    Storage createStorage();
 }

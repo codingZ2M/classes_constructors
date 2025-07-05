@@ -26,6 +26,7 @@ class Document implements Cloneable {
         System.out.println("Document Title: " + title);
     }
 
+    @Override
     public Document clone() {
         try {
             return (Document) super.clone();
