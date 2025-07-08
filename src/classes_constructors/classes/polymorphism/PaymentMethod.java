@@ -22,6 +22,7 @@ package classes_constructors.classes.polymorphism;
  */
 
 public interface PaymentMethod {
+	
     void pay(double amount);
 }
 

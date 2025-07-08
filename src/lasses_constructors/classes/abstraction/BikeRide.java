@@ -4,6 +4,7 @@ package lasses_constructors.classes.abstraction;
 //Subclass of Ride, implements Payable
 //Inherits common ride behavior + adds payment logic
 class BikeRide extends Ride {
+	
     private final double ratePerKm = 7;
 
     public BikeRide() {
