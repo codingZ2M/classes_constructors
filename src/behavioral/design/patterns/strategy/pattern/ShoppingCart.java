@@ -1,15 +1,25 @@
 package behavioral.design.patterns.strategy.pattern;
 
-// Context Class that Uses the Strategy
+// Business Logic Layer
+/*
+  🔧 Purpose:
+		Acts as the main component representing the user's checkout flow
+		Delegates payment behavior to PaymentContext
+		Let users choose their preferred payment method (setPaymentStrategy(...))
+		Initiate checkout and trigger the payment (checkout(...))
+		ShoppingCart doesn't care how payment works — only that it works.
+ */
 public class ShoppingCart {
-    private PaymentStrategy paymentStrategy;
+	
+	 private final PaymentContext paymentContext = new PaymentContext();
 
-    public void setPaymentStrategy(PaymentStrategy strategy) {
-        this.paymentStrategy = strategy;
-    }
+	   public void setPaymentStrategy(PaymentStrategy strategy) {
+	        paymentContext.setStrategy(strategy);
+	    }
 
-    public void checkout(int amount) {
-        paymentStrategy.pay(amount);
-    }
+	    public void checkout(int amount) {
+	        paymentContext.executePayment(amount);
+	    }
+	    
 }
 

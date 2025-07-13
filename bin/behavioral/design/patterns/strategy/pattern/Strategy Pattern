@@ -1,0 +1,54 @@
+How the Strategy Pattern builds on polymorphism?
+================================================
+
+🔍 First, What Is Polymorphism?
+Different classes can be treated as the same type (usually via an interface or superclass), and the correct
+method implementation is chosen at runtime.
+For example, both CreditCardPayment and PayPalPayment use polymorphism—they implement the same interface differently.
+
+
+💡 Then What Is the Strategy Pattern?
+========================================
+The Strategy Pattern is a behavioral design pattern that:
+Allows a class to select one of many behaviors (algorithms) at runtime using an interchangeable family of strategies (objects).
+
+It uses polymorphism under the hood — but its goal is higher-level:
+	Encapsulate interchangeable behaviors
+	Delegate the decision to the calling context
+	
+NOTE: 👉 This is more than polymorphism — this is strategy injection and dynamic behavior switching.
+	  👉 Uses runtime dispatch to swap behavior
+	  
+	  
+✅ Why the code structure of Strategy Pattern and polymorphism is the same?
+==========================================================================
+At the core, the **Strategy Pattern **relies on polymorphism. So naturally:
+	You define an interface or abstract class
+	You implement multiple concrete classes
+	You call methods on them via the interface
+That is polymorphism. ✅
+
+✅ Technically:
+Yes, the code structure of Strategy Pattern and polymorphism is the same, because Strategy Pattern uses polymorphism as its foundation.
+They both involve:
+	An interface or abstract class
+	Multiple implementations
+	A reference to the interface, calling the method dynamically at runtime
+
+
+
+📌 Then What's the Difference?
+================================
+✅ Polymorphism = "Mechanism"
+A language feature that lets different classes be used interchangeably through a common interface.
+
+
+✅ Strategy Pattern = "Design Intent"
+======================================
+A design pattern that uses polymorphism to encapsulate interchangeable behaviors and inject them at runtime.
+So yes — the syntax is the same, but the design pattern introduces structure, naming, and intent that pure polymorphism alone doesn’t require.
+
+
+🧠 Analogy: Same Tool, Different Blueprint
+==========================================
+Imagine polymorphism is a power socket, and Strategy Pattern is the idea of plugging in different appliances (fan, heater, lamp) based on your need.

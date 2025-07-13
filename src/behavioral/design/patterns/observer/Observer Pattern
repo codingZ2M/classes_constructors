@@ -1,0 +1,33 @@
+✅ Real-World Scenario: Stock Price Alert System
+🎯 Problem:
+You’re building a stock market alert system.
+Users can subscribe to stock price changes for specific companies (like Tesla, Apple). When a stock’s price 
+changes, all interested users must be notified automatically.
+
+🔍 Observer Pattern to the Rescue!
+✅ Intent:
+Define a one-to-many dependency between objects so that when one object (subject) changes state, all its 
+dependents (observers) are notified and updated automatically.
+
+🧱 Components:
+| Role                   | Java Class                           | Description                                              |
+| ---------------------- | ------------------------------------ | -------------------------------------------------------- |
+| **Subject**            | `Stock`                              | Keeps track of price and list of observers (subscribers) |
+| **Observer**           | `Investor`                           | Gets notified when a stock's price changes               |
+| **Concrete Observers** | `EmailInvestor`, `MobileAppInvestor` | Each investor gets updates in different ways             |
+| **Client**             | `Main`                               | Sets up the observers and simulates price changes        |
+
+
+🔍 Key Concepts Illustrated
+	Loose Coupling: Stock doesn’t know what kind of observers it has (email, app, etc.).
+	Open/Closed Principle: You can add new observers (like SMS alerts) without changing Stock.
+	Scalability: 1 stock → many investors; each gets the update automatically.
+
+
+🧠 Real-World Use Cases:
+	News apps updating subscribers when an article is published
+	Weather alert system pushing updates to various clients
+	Inventory systems notifying when product stock levels drop
+	E-commerce notifications for flash sales or price drops
+	
+	

@@ -1,0 +1,51 @@
+✅ Real-World Scenario: Smart Home Automation System
+🎯 Problem:
+You're building a smart home automation system where users can control devices like lights, fans, and thermostats.
+
+Users should be able to:
+	Turn devices on/off
+	Schedule or queue commands
+	Undo previous actions
+
+We want to encapsulate each device action as a command object, enabling flexibility like command queuing, logging, and undo.
+
+
+🔍 Why Use the Command Pattern?
+==============================
+The Command Pattern encapsulates a request as an object, allowing you to:
+	Parameterize objects with different requests,
+	Queue or log requests
+	Support infeasible/unattainable operations.
+	
+
+🧱 Components
+| Role                  | Java Class                        | Responsibility                             |
+| --------------------- | --------------------------------- | ------------------------------------------ |
+| **Command Interface** | `Command`                         | Declares the `execute()` method            |
+| **Concrete Commands** | `LightOnCommand`, `FanOffCommand` | Implement the command for specific actions |
+| **Receiver**          | `Light`, `Fan`                    | The actual device performing the work      |
+| **Invoker**           | `SmartHomeController`             | Stores and triggers the commands           |
+| **Client**            | `Main`                            | Sets everything up and sends commands      |
+
+
+🔍 Benefits Illustrated
+=======================
+| Feature                | Benefit                                                     |
+| ---------------------- | ----------------------------------------------------------- |
+| **Command as objects** | Easily store, queue, or undo actions                        |
+| **Loose coupling**     | Invoker (`SmartHomeController`) doesn’t know device details |
+| **Extensibility**      | Add new devices or commands with zero changes to invoker    |
+| **Undo functionality** | Built-in using command history stack                        |
+
+
+🔧 Real-World Use Cases:
+=======================
+Task queues (e.g., job scheduling systems like Quartz)
+Remote control systems
+Workflow engines (BPM, orchestration)
+File operation systems (copy, delete, undo)
+CLI command interpreters
+
+
+Template Method
+Iterator

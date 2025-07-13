@@ -7,7 +7,7 @@ package behavioral.design.patterns.strategy.pattern;
  */
 
 /*
-   ➤ Purpose: Define a family of algorithms (strategies), put each one in its own class, and make them interchangeable
+   ➤ Strategy Pattern Purpose: Define a family of algorithms (strategies), put each one in its own class, and make them interchangeable
      — so you can change the algorithm at runtime without modifying the client.
      
    🎯 Real-World Analogy:
